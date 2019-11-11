@@ -1,0 +1,17 @@
+
+DROP TABLE IF EXISTS `wp_contact234`;
+
+CREATE TABLE `wp_contact234` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8_unicode_ci,
+  `post_date` datetime DEFAULT NULL,
+  `status` enum('0','1') COLLATE utf8_unicode_ci DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `wp_contact234` */
+
+insert  into `wp_contact234`(`id`,`name`,`email`,`phone`,`message`,`post_date`,`status`) values (1,'Bikki Bhupal','bikki2gmail.com','1234567','This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. This is message send by user. ','2019-11-10 05:15:36','0'),(2,'Adamin section','admin@gmail.com','654321`232456','Another message send by admin. Another message send by admin. Another message send by admin. Another message send by admin. \r\nAnother message send by admin. ','2019-01-10 05:15:36','1'),(13,'sfsfsf',NULL,NULL,NULL,NULL,'0'),(14,'dsfdsfdsfd',NULL,NULL,NULL,NULL,'0'),(15,'fdsfdsff',NULL,'sdfdsfdf',NULL,NULL,'0'),(16,'sfsfsdf','dsfds',NULL,NULL,NULL,'0'),(18,'sadaa',NULL,NULL,NULL,NULL,'0'),(19,'sadasds',NULL,NULL,NULL,NULL,'0'),(20,'ddasd',NULL,NULL,NULL,NULL,'0'),(21,'asdsad',NULL,NULL,NULL,NULL,'0'),(22,'asdsaddsadassad',NULL,NULL,NULL,NULL,'0'),(23,'dsddas',NULL,NULL,NULL,NULL,'0'),(24,'dasds',NULL,NULL,NULL,NULL,'0'),(26,'sdsad','sdsadsd',NULL,NULL,NULL,'0'),(27,'asdsads','sdsdsadsdd','asdsd',NULL,NULL,'0'),(28,'dsasdsa',NULL,'sdasd',NULL,NULL,'0'),(29,NULL,'dsdas',NULL,NULL,NULL,'0'),(30,'dsadsadsad','asdsadsd','sdsdsad',NULL,NULL,'0'),(31,'sadsadas',NULL,NULL,NULL,NULL,'0'),(32,'asdsad','dsads',NULL,NULL,NULL,'0'),(33,'sadadsad',NULL,NULL,NULL,NULL,'0'),(34,'sadadsa',NULL,NULL,NULL,NULL,'0'),(35,'dasddasd',NULL,NULL,NULL,NULL,'0'),(36,'asdsad',NULL,NULL,NULL,NULL,'0'),(37,'asddasd',NULL,NULL,NULL,NULL,'0'),(38,'asdassa',NULL,NULL,NULL,NULL,'0'),(39,'dasdassad',NULL,NULL,NULL,NULL,'0'),(40,'asdsads',NULL,NULL,NULL,NULL,'0');

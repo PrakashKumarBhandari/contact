@@ -1,12 +1,5 @@
 <?php
-/**
-* Plugin Name: Contact Form : Contact234
-* Plugin URI: https://www.domain.com/
-* Description: Contact form in post or page using ajax form using short code.
-* Version: 1.0
-* Author: Auhor 
-* Author URI: http://domain.com/
-**/
+
 ?>
    
         <div class="contactform_wrapper">

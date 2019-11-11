@@ -1,24 +1,23 @@
-// function to create the DB / Options / Defaults					
-function your_plugin_options_install() {
-   	global $wpdb;
-  	global $your_db_name;
+<?php
+global $wpdb;
+$table_name = $wpdb->prefix . "contact1234";
+$my_products_db_version = '1.0.0';
+$charset_collate = $wpdb->get_charset_collate();
 
-	// create the ECPT metabox database table
-	if($wpdb->get_var("show tables like '$your_db_name'") != $your_db_name) 
-	{
-		$sql = "CREATE TABLE " . $your_db_name . " (
-		`id` mediumint(9) NOT NULL AUTO_INCREMENT,
-		`field_1` mediumtext NOT NULL,
-		`field_2` tinytext NOT NULL,
-		`field_3` tinytext NOT NULL,
-		`field_4` tinytext NOT NULL,
-		UNIQUE KEY id (id)
-		);";
-		
-		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-		dbDelta($sql);
-	}
+if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) != $table_name ) {
 
+    $sql = "CREATE TABLE $table_name (
+            ID mediumint(9) NOT NULL AUTO_INCREMENT,
+            `name` varchar 255,
+            `email` varchar 255,
+			`phone` varchar 255,
+			`message` text,
+			`post_date` datetime,
+			`status` enum('0','1') 0,
+            PRIMARY KEY  (ID))    $charset_collate;";
+
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    dbDelta( $sql );
+    add_option( 'my_db_version', $my_products_db_version );
 }
-// run the install scripts upon plugin activation
-register_activation_hook(__FILE__,'your_plugin_options_install');
+?>

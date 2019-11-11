@@ -18,7 +18,10 @@ define( 'CONTACT234_PLUGIN_NAME', trim( dirname( CONTACT234_PLUGIN_BASENAME ), '
 define( 'CONTACT234_PLUGIN_DIR', untrailingslashit( dirname( CONTACT234_PLUGIN ) ) );
 define( 'CONTACT234_PLUGIN_PATH', plugin_dir_url( CONTACT234_PLUGIN_BASENAME ));
 
-
+function installer(){
+    include(CONTACT234_PLUGIN_PATH.'admin/installer.php');
+}
+register_activation_hook( __file__, 'installer' );
 
 function contact234_wordpress_plugin_contact($atts) {
 	?>
